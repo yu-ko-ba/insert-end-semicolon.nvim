@@ -1,8 +1,18 @@
-# insert-end-semicolon.nvim
-
-行末に「;」を入力する関数を定義してあります。
-
+## Installation
+### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
+```:lua
+return {
+    {
+        "yu-ko-ba/insert-end-semicolon.nvim",
+            lazy = true,
+            keys = {
+                {
+                    ";<Esc>",
+                    "<Cmd>lua require('insert-end-semicolon').insertEndSemicolon()<CR><ESC>",
+                    mode = "i",
+                    desc = "insert 「;」 at the end of line",
+                },
+            },
+    },
+}
 ```
-:lua require('insert-end-semicolon').insertEndSemicolon()
-```
-で呼び出せますので、いい感じにキーマップしてお使いください。
